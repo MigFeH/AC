@@ -1,0 +1,165 @@
+IF => se accede a codigo
+MEM => se accede a datos si se hace una operacion de carga o almacenamiento
+ID => se accede a datos si se usa un operando inmediato ¿?
+
+
+
+-----------------------------------------------------------
+
+la estrategia de correspondencia asociativa por conjuntos es la que se lleva en la práctica
+
+
+
+EN EL EXAMEN PUEDEN PREGUNTAR POR LA TASA DE ACIERTOS O FALLOS DE UNA CACHÉ (SE HACE CON
+EL valgrind)
+
+----------------------------------------------------------
+
+en el examen es habitual que den un fichero de traza y una configuracion de memoria,
+tendremos que responder a unas preguntas (IMPORTANTE PONER LA CONFIGURACION BIEN)
+
+
+bits de direcciones: espacio de ¿?
+
+tienen 64 bytes y 16 lineas: 
+1º) tamaño cache = nº lineas * tamaño de la linea
+nº lineas cache
+tamaño de la linea
+nº de vias (asociatividad) = 
+
+introducimos: nº de lineas, tamaño de linea, nº de vias
+
+
+fetch: lectura de instrucciones
+read: lectura de datos
+
+-------------------------------------------------------
+correspondencia directa => 9 bits etiqueta | 3 bits para determinar la linea de la caché en la que irá | 3 bits desplazamiento
+
+correspondencia asociativa por conjuntos => 10 bits etiqueta | 2 bits para determinar la linea de la caché en la que irá | 3 bits desplazamiento
+-------------------------------------------------------
+von neumman: 1 unica memoria => cache unificada
+harvard:
+
+-------------------------------------------------------
+tamaño de la caché = nº lineas * tamaño linea
+nº lineas de la caché = nº conjuntos * nº de vias
+-------------------------------------------------------
+
+marco rojo en un acceso = fallo de caché
+
+fetch 3h:0h => se ha hecho un acceso desde el byte 0h hasta el byte 3h
+
+acierto caché --> 1 ciclo de reloj
+fallo de caché --> se tiene que mover el bloque de acceso de memoria a la caché
+
+
+Tcp = Ac*tc + (1-Ac)*Bc*tp (cuando no hay virtualizacion) (la parte del bc (nº de accesos requeridos para satisfacer un fallo de la caché!!!) (tamaño del bloque en la cache) es valida cuando se accede a un byte.
+Sino, si se accede a mas de 1 byte, ese Bc es el nº de accesos que son necesarios para completar el byte)
+
+
+
+
+Tcp = 0.9564 * 1 ciclo + (1-0.9564) * 1 * 8 ciclos = 1.29 sg
+
+
+
+
+numero de lineas de direcciones que puede generar la cpu: 2^Address bits
+probabilidad de acierto de la caché (si no usamos localidad): tamaño de la caché/numero de lineas de direcciones que puede generar la cpu = 256/2^15 = 0.0078
+ 
+
+
+Tcp = 0.0078 * 1 ciclo + (1-0.0078) * 1 * 8 ciclos = 7.98 sg
+
+
+asociatividad (numero de vias 1) => correspondencia directa
+1 conjunto (nº conjuntos = nº vias) => asociativa por conjuntos
+mas de 1 vía => totalmente asociativa
+
+nº del bloque: todo menos los bits del desplazamiento
+
+3 bits de desplazamiento
+
+label: etiqueta
+line: la linea
+offset: desplazamiento
+
+
+actualizacion: bit de dirty de 1 a 0
+
+
+espacios de direcciones de 16KiB => el nº de bits de direcciones es de 16*2^10 = 
+
+
+----------------------------------------------------------------
+
+extension .so => libreria de enlace dinámico (el ejecutable sólo contiene el código propio de la aplicacion. Cuando se lanza se carga y, por tanto, se enlaza con la libreria dinámica)
+
+la librería de enlace dinámico tiene otra librería de carga que es también dinámica que tienen el prefijo ld (ejemplo: ld-2.23.so)
+
+
+[vdso] indica la pagina que se llama a servicios del so sin hacer un cambio de contexto y lo hace de forma ultrarápida con los datos de [vvar]
+
+
+opcion -static => enlaza con librerias estáticas (implica que el ejecutable pese mucho mas que el ejecutable enlazado con librerias dinámicas)
+
+
+
+
+
+estructura del pte:
+	20 bits mas significativos el marco
+	12 bits menos significativos los flags (las entradas de la tabla de páginas) (el bit 0 nos indica el bit de presencia)
+
+	para saber si una pagina está en memoria (bit de presencia a 1) usamos una máscara (usamos como operador el and)
+
+		00.........01 (mascara) [parte que no nos interesa ponemos 0] [la parte que nos interesa filtrar ponemos 1]
+			AND
+		...........0P (el pte obtenido)
+
+	dir virtual:
+		20 bits mas significativos para el numero de pagina
+		12 bits menos significativos para el desplazamiento
+
+
+
+en el examen van a pader hacer algo con la funcion print_virtual_physical_pte(), para ello:
+	al compilar necesitamos el archivo 3-4print-pte.c y al enlazar añadimos al final -lmem
+
+
+en dos tareas que ejecutan un mismo programa, si una variable tiene misma dirección virtual => direccion virtual asignada por el compilador. Sino la dir virtual sería asignada por el SO
+
+si dos entradas en la tabla de paginas fueran iguales => dos direcciones virtuales tienen el mismo marco
+
+----------------------------------------------------------------
+
+el malloc siempre asigna el area de memoria en el heap (montón)
+
+
+
+flags => entradas en la tabla de paginas sin contar el marco
+
+067h = 0000 0110 0111
+
+025h = 0000 0010 0101
+
+161h = 0001 0110 0001
+
+dir fisica restandole C0000000h obtenemos la dir virtual asociada; las direcciones mencionadas con separadas por la cte C0000000h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

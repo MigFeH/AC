@@ -1,7 +1,3 @@
-<h1 align="center">Repositorio de Arquitectura de Computadores</h1>
-
-⚠️Cuidado con los plagios⚠️<br>
-⭐Si te ha resultado útil no olvides darme una estrellita 😉
-
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=uo287577&theme=dark" width="48%" > <img src="https://github-readme-stats.vercel.app/api?username=uo287577&show_icons=true&theme=gotham" alt="github stats" width="45%" align="right"/>
+version https://git-lfs.github.com/spec/v1
+oid sha256:bcce66a60bb9b7eef6fc597295086f3c99511b39e49d08eb3b899b6931a34465
+size 178

@@ -1,6 +1,3 @@
-  bne r4, r4, target
-  daddi r5, r4, 90
-target:
-  dmul r3, r8, r5
-  ld r8, 16(r9)
-  andi r3, r8, 40
+version https://git-lfs.github.com/spec/v1
+oid sha256:82d23b22cac06f7068a03626cd2cfe394906fcea9f42e21c5da49d093124e882
+size 106

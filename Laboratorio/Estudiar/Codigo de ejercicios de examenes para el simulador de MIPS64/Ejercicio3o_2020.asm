@@ -1,9 +1,3 @@
-  daddi r5, r0, 9
-  daddi r3, r0, -3
-begin:
-  beq r5, r0, end
-  dadd r5, r5, r3
-  dmul r1, r3, r4
-  j begin
-end:
-  slt r4, r1, r4
+version https://git-lfs.github.com/spec/v1
+oid sha256:298395f51653856d7584ae0a6c3e0f3ec06f705c158a169e4c773ef80f8a1927
+size 137

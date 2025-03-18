@@ -1,12 +1,3 @@
-	.code
-
-main:
-	xor    r8, r8, r8
-	daddi  r9, r0, 16	
-for:
-	beq    r8, r9, end
-	dadd   r10, r10, r11  ; a = a + c
-	daddi  r8, r8, 1
-	j      for
-end:
-	nop
+version https://git-lfs.github.com/spec/v1
+oid sha256:623bad3e59c00f4e8edda4532ec648c9cf6934900f75269a165ff2dc1469599d
+size 163

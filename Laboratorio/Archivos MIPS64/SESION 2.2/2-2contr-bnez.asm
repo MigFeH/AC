@@ -1,12 +1,3 @@
-	.code
-
-main:
-	daddi r8, r0, 2      ; 2 iterations
-	xor   r10, r10, r10
-	nop
-loop:
-	daddi r8, r8, -1
-	daddi r21, r0, 3
-	daddi r22, r0, 2
-	bnez  r8, loop       ; branch if r8 != 0
-	xor   r20, r20, r20
+version https://git-lfs.github.com/spec/v1
+oid sha256:01b349718cef984a88c8a2feab49bb2ba9b07c5d4f045dfc945cdbe166fec862
+size 212

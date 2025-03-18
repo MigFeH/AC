@@ -1,5 +1,3 @@
-ori r5, r0, 1
-ori r6, r0, 3
-dmul r4, r6, r5
-ori r4, r0, 7
-ori r6, r0, 6
+version https://git-lfs.github.com/spec/v1
+oid sha256:35f8c140b794ec2aa182b50a719304f3f5ee9194f560b6a94bb9dd8be7f401ae
+size 75

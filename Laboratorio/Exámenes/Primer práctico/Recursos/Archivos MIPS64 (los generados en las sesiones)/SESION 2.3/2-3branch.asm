@@ -1,8 +1,3 @@
-.code
-	ori r1, r0, 2 ; r1 = 2
-loop:
-	beqz r1, endloop ; Branch on equal to zero
- 	daddi r1, r1, -1 ; r1 = r1 - 1
-	j loop
-endloop:
-	xor r1, r1, r1 ; r1 = 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e42ed38899bd1347d78b812d4b3ae1e07d424ca35561058759eadb2d78930d3
+size 161

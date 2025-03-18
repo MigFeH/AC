@@ -1,13 +1,3 @@
-#include "1-1copy.h"
-
-int copy(char * source, char * destination, unsigned int lengthDestination)
-{
-	for(int i = 0; i < lengthDestination; i++)
-	{
-		*destination = *source;
-		destination++;
-		source++;
-	}
-	*destination = '\0';
-	return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f05eaa4259b1e6f54519da1b444ea00f086b0d07b83ea0ab43678cafd217116
+size 240

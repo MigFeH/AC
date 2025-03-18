@@ -1,18 +1,3 @@
-#include <stdio.h>
-#include "1-1copy.h"
-#include <stdlib.h>
-
-int main()
-{
-	char * source = "abc";
-	unsigned int lengthDestination = 3;
-	char * destination = (char *)malloc(3);
-
-
-	copy(source, destination, lengthDestination);
-	
-	printf("Cadena a copiar: %s; Cadena copiada: %s\n", source, destination);
-	
-	free(destination);
-	return 0;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3bf7d9d1046f66d4baf5825c12f3cbaec1a1e2ab2be139ab5827117b27dc9a0
+size 337

@@ -1,9 +1,3 @@
-.code
-main:
-	daddi r1, r2, 5
-	xor   r1, r5, r3	
-	dadd  r6, r4, r2
-	dsub  r8, r3, r2
-	ld    r8, 120(r1)
-	and   r8, r4, r1
-	
+version https://git-lfs.github.com/spec/v1
+oid sha256:e90256dfaba711f5fdfdd82fff5088692b7d675c1c8f4889ad3ac824adb247a9
+size 132
